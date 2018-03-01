@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="KGk-i7-Jjw" customClass="BBTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2mc-Vs-sbN">
+                        <rect key="frame" x="0.0" y="0.0" width="169" height="249.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="1NE-nA-vyd"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="tp4-fP-6hA"/>
+                        </connections>
+                    </tableView>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-Ah-NIQ">
+                        <rect key="frame" x="169" y="0.0" width="169" height="249.5"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2mc-Vs-sbN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Fq-Qy-nZr"/>
+                    <constraint firstItem="2mc-Vs-sbN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BXg-20-7Jy"/>
+                    <constraint firstItem="ch3-Ah-NIQ" firstAttribute="leading" secondItem="2mc-Vs-sbN" secondAttribute="trailing" id="LlZ-rM-mjQ"/>
+                    <constraint firstItem="2mc-Vs-sbN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Sky-88-fik"/>
+                    <constraint firstAttribute="bottom" secondItem="2mc-Vs-sbN" secondAttribute="bottom" id="aj5-ix-asc"/>
+                    <constraint firstItem="ch3-Ah-NIQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gyE-SC-hBW"/>
+                    <constraint firstAttribute="trailing" secondItem="ch3-Ah-NIQ" secondAttribute="trailing" id="rDO-Tg-bYA"/>
+                    <constraint firstAttribute="bottom" secondItem="ch3-Ah-NIQ" secondAttribute="bottom" id="rua-bn-HGT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="scrollView" destination="ch3-Ah-NIQ" id="CWj-S8-7Ar"/>
+                <outlet property="tableView1" destination="2mc-Vs-sbN" id="s3L-Be-4Ky"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="157"/>
+        </tableViewCell>
+    </objects>
+</document>
